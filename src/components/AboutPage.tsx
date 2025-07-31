@@ -442,12 +442,6 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Mission Statement */}
-      <section id="products" className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-20 snap-start min-h-screen flex items-center">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-        </div>
-      </section>
-
       {/* Footer */}
       <footer id="contact" className="bg-gray-900 text-gray-300 py-12 snap-start">
         <div className="max-w-6xl mx-auto px-6 text-center">
