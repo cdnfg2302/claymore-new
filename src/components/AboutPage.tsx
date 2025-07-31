@@ -9,7 +9,7 @@ const AboutPage: React.FC = () => {
       letter: 'C',
       english: 'Creation',
       chinese: '创造',
-      description: '以代码和数据为画笔，将想象力赋予生命，我们为最纯粹的创造而生。',
+      description: '以代码和数据为画笔，将想象力赋予生命，为最纯粹的创造而生。',
       icon: Sparkles,
       gradient: 'from-blue-600 to-indigo-600'
     },
@@ -17,7 +17,7 @@ const AboutPage: React.FC = () => {
       letter: 'L',
       english: 'Language',
       chinese: '语言',
-      description: '我们致力于打破一切沟通壁垒，让AI真正掌握语言的力量以连接世界。',
+      description: '致力于打破一切沟通壁垒，让AI真正掌握语言的力量以连接世界。',
       icon: Globe,
       gradient: 'from-indigo-600 to-purple-600'
     },
@@ -25,7 +25,7 @@ const AboutPage: React.FC = () => {
       letter: 'A',
       english: 'Agent',
       chinese: '智能体',
-      description: '我们构建的不仅是工具，更是一个个聪明的智能体，能自主感知、决策并执行任务。',
+      description: '构建的不仅是工具，更是一个个聪明的智能体，能自主感知、决策并执行任务。',
       icon: Users,
       gradient: 'from-purple-600 to-pink-600'
     },
@@ -33,7 +33,7 @@ const AboutPage: React.FC = () => {
       letter: 'Y',
       english: 'YOUNG',
       chinese: '年轻',
-      description: '我们拥抱并汇聚年轻的力量，以全新的视角挑战传统，为下一代开发者和创造者打造未来。',
+      description: '拥抱并汇聚年轻的力量，以全新的视角挑战传统，为下一代开发者和创造者打造未来。',
       icon: Zap,
       gradient: 'from-pink-600 to-rose-600'
     },
@@ -41,7 +41,7 @@ const AboutPage: React.FC = () => {
       letter: 'M',
       english: 'Module',
       chinese: '模块',
-      description: '我们将复杂的AI能力，精心打磨成稳定、可靠且易于集成的坚实模块。',
+      description: '将复杂的AI能力，精心打磨成稳定、可靠且易于集成的坚实模块。',
       icon: Layers,
       gradient: 'from-rose-600 to-orange-600'
     },
@@ -49,7 +49,7 @@ const AboutPage: React.FC = () => {
       letter: 'O',
       english: 'Orchestrate',
       chinese: '协同',
-      description: '在我们的智能生态中，独立的模块互相赋能，谱写高效和谐的智能交响乐。',
+      description: '在智能生态中，独立的模块互相赋能，谱写高效和谐的智能交响乐。',
       icon: Target,
       gradient: 'from-orange-600 to-yellow-600'
     },
@@ -57,7 +57,7 @@ const AboutPage: React.FC = () => {
       letter: 'R',
       english: 'Reality',
       chinese: '现实',
-      description: '我们致力于将虚拟智能无缝融入物理现实，创造更智能、有趣的交互体验。',
+      description: '致力于将虚拟智能无缝融入物理现实，创造更智能、有趣的交互体验。',
       icon: Code,
       gradient: 'from-yellow-600 to-green-600'
     },
@@ -65,7 +65,7 @@ const AboutPage: React.FC = () => {
       letter: 'E',
       english: 'Evolve',
       chinese: '进化',
-      description: '在AI的世界里，我们随技术、需求和时代一同进化，永不止步。',
+      description: '在AI的世界里，随技术、需求和时代一同进化，永不止步。',
       icon: RotateCcw,
       gradient: 'from-green-600 to-blue-600'
     }
