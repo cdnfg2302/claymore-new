@@ -253,8 +253,6 @@ const AboutPage: React.FC = () => {
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
               始于创造，通晓语言，以打造自主智能体(Agent)为使命，凭借年轻(YOUNG)的力量挑战未来。
-              我们将能力固化为一个个模块，并让它们智能地协同，最终重塑我们与现实的交互方式，
-              并在这个过程中永恒地进化。
             </p>
           </div>
           <div className="mt-12 animate-bounce">
