@@ -95,18 +95,18 @@ const AboutPage: React.FC = () => {
       title: '务实高效',
       subtitle: 'Integrity & Transparency',
       description: '技术最终要创造价值。我们崇尚务实，快速迭代，以最高效的方式解决最真实的问题。',
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-      borderColor: 'border-green-200'
+      color: 'text-emerald-500',
+      bgColor: 'bg-emerald-25',
+      borderColor: 'border-emerald-100'
     },
     {
       icon: Rocket,
       title: '追求卓越',
       subtitle: 'Pursuit of Excellence',
       description: '我们对质量有着极致的追求，不满足于"够用"，而是要做到最好。每一行代码，每一个设计，都体现我们对卓越的承诺。',
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
-      borderColor: 'border-purple-200'
+      color: 'text-violet-500',
+      bgColor: 'bg-violet-25',
+      borderColor: 'border-violet-100'
     }
   ];
 
