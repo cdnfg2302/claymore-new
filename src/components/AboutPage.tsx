@@ -242,7 +242,8 @@ const AboutPage: React.FC = () => {
       
       {/* Hero Section */}
       <div className="relative overflow-hidden pt-16">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10"></div>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url('/lovable-uploads/027c626f-edc7-462e-a517-7044c2e77619.png')`}}></div>
+        <div className="absolute inset-0 bg-white/80"></div>
         <div className="relative max-w-6xl mx-auto px-6 py-20 text-center">
           <div className="animate-fade-in">
             <h1 className="text-7xl md:text-8xl lg:text-9xl font-black text-gray-900 mb-6 tracking-tight">
