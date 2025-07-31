@@ -170,7 +170,7 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen">
       {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50">
         <div className="max-w-[224rem] mx-auto px-8">
@@ -241,7 +241,7 @@ const AboutPage: React.FC = () => {
       </nav>
       
       {/* Hero Section */}
-      <div className="relative overflow-hidden pt-16">
+      <section className="relative overflow-hidden pt-16 snap-start min-h-screen flex items-center">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url('/lovable-uploads/027c626f-edc7-462e-a517-7044c2e77619.png')`}}></div>
         <div className="absolute inset-0 bg-white/80"></div>
         <div className="relative max-w-6xl mx-auto px-6 py-20 text-center">
@@ -260,56 +260,58 @@ const AboutPage: React.FC = () => {
             <ChevronDown className="w-8 h-8 text-gray-400 mx-auto" />
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Story Grid */}
-      <div id="about" className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
-          {storyItems.map((item, index) => {
-            const IconComponent = item.icon;
-            return (
-              <div
-                key={item.letter}
-                className="group relative bg-white/80 backdrop-blur-sm rounded-xl p-5 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100"
-                style={{
-                  animationDelay: `${index * 50}ms`
-                }}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-xl`}>
-                </div>
-
-                <div className="relative">
-                  <div className="flex items-start mb-4">
-                    <div className="relative flex-shrink-0">
-                      <span className={`text-5xl font-black bg-gradient-to-br ${item.gradient} bg-clip-text text-transparent opacity-25 group-hover:opacity-35 transition-opacity duration-300`}>
-                        {item.letter}
-                      </span>
-                      <div className="absolute top-2 left-2">
-                        <IconComponent className={`w-5 h-5 text-white bg-gradient-to-br ${item.gradient} p-1 rounded-md shadow-md`} />
-                      </div>
-                    </div>
-                    <div className="ml-4 flex-1 min-w-0">
-                      <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-blue-900 transition-colors duration-300 line-clamp-1">
-                        {item.english}
-                      </h3>
-                      <p className="text-sm font-medium text-gray-500 mb-2">
-                        {item.chinese}
-                      </p>
-                    </div>
+      <section id="about" className="snap-start min-h-screen flex items-center py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
+            {storyItems.map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <div
+                  key={item.letter}
+                  className="group relative bg-white/80 backdrop-blur-sm rounded-xl p-5 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+                  style={{
+                    animationDelay: `${index * 50}ms`
+                  }}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-xl`}>
                   </div>
 
-                  <p className="text-gray-700 leading-relaxed text-sm group-hover:text-gray-800 transition-colors duration-300 line-clamp-3">
-                    {item.description}
-                  </p>
+                  <div className="relative">
+                    <div className="flex items-start mb-4">
+                      <div className="relative flex-shrink-0">
+                        <span className={`text-5xl font-black bg-gradient-to-br ${item.gradient} bg-clip-text text-transparent opacity-25 group-hover:opacity-35 transition-opacity duration-300`}>
+                          {item.letter}
+                        </span>
+                        <div className="absolute top-2 left-2">
+                          <IconComponent className={`w-5 h-5 text-white bg-gradient-to-br ${item.gradient} p-1 rounded-md shadow-md`} />
+                        </div>
+                      </div>
+                      <div className="ml-4 flex-1 min-w-0">
+                        <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-blue-900 transition-colors duration-300 line-clamp-1">
+                          {item.english}
+                        </h3>
+                        <p className="text-sm font-medium text-gray-500 mb-2">
+                          {item.chinese}
+                        </p>
+                      </div>
+                    </div>
+
+                    <p className="text-gray-700 leading-relaxed text-sm group-hover:text-gray-800 transition-colors duration-300 line-clamp-3">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Corporate Culture Section */}
-      <div className="bg-white py-20">
+      <section className="bg-white py-20 snap-start min-h-screen flex items-center">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -349,10 +351,10 @@ const AboutPage: React.FC = () => {
             })}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Team Section */}
-      <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-20">
+      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20 snap-start min-h-screen flex items-center">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -438,16 +440,16 @@ const AboutPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Mission Statement */}
-      <div id="products" className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-20">
+      <section id="products" className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-20 snap-start min-h-screen flex items-center">
         <div className="max-w-4xl mx-auto px-6 text-center">
         </div>
-      </div>
+      </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-gray-900 text-gray-300 py-12">
+      <footer id="contact" className="bg-gray-900 text-gray-300 py-12 snap-start">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <div className="mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">Claymore AI Lab</h3>
