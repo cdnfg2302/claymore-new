@@ -443,7 +443,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="relative py-12 snap-start bg-cover bg-center bg-no-repeat text-gray-300" style={{backgroundImage: `url('/lovable-uploads/dac9da36-69d5-4637-b181-e36b6aaf5d71.png')`, backgroundPosition: 'center 50%'}}>
+      <footer id="contact" className="relative py-12 snap-start bg-cover bg-center bg-no-repeat text-gray-300" style={{backgroundImage: `url('/lovable-uploads/dac9da36-69d5-4637-b181-e36b6aaf5d71.png')`, backgroundPosition: 'center 51%'}}>
         <div className="relative mx-auto px-6 text-center" style={{maxWidth: '108rem'}}>
           <div className="border-t border-gray-700 pt-8">
             <p className="text-gray-500 mb-4">塑造智能未来，从今天开始</p>
