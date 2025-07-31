@@ -444,7 +444,7 @@ const AboutPage: React.FC = () => {
 
       {/* Footer */}
       <footer id="contact" className="relative py-12 snap-start bg-cover bg-center bg-no-repeat text-gray-300" style={{backgroundImage: `url('/lovable-uploads/dac9da36-69d5-4637-b181-e36b6aaf5d71.png')`, backgroundPosition: 'center 53%'}}>
-        <div className="relative max-w-6xl mx-auto px-6 text-center">
+        <div className="relative mx-auto px-6 text-center" style={{maxWidth: '93.6rem'}}>
           <div className="border-t border-gray-700 pt-8">
             <p className="text-gray-400 mb-4">塑造智能未来，从今天开始</p>
             <p className="text-gray-500">
