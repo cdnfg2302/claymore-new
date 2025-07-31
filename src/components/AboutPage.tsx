@@ -442,13 +442,6 @@ const AboutPage: React.FC = () => {
       {/* Mission Statement */}
       <div id="products" className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            重塑未来，永恒进化
-          </h2>
-          <p className="text-xl md:text-2xl text-blue-100 leading-relaxed font-light">
-            在AI与现实交融的时代，我们不仅是技术的创造者，更是未来的架构师。
-            每一个模块的完善，每一次协同的优化，都是向着更智能世界迈出的坚实步伐。
-          </p>
         </div>
       </div>
 
