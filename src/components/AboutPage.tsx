@@ -356,59 +356,59 @@ const AboutPage: React.FC = () => {
       {/* Team Section */}
       <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20 snap-start min-h-screen">
         <div className="max-w-6xl mx-auto px-6 h-full flex flex-col justify-center">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               核心团队
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               汇聚顶尖人才，用专业和热情驱动AI技术的边界拓展
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
+                className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
               >
-                <div className="flex items-start mb-6">
+                <div className="flex items-start mb-4">
                   <div className="relative">
                     <img
                       src={member.avatar}
                       alt={member.name}
-                      className="w-20 h-20 rounded-2xl object-cover shadow-md group-hover:shadow-lg transition-shadow duration-300"
+                      className="w-16 h-16 rounded-xl object-cover shadow-md group-hover:shadow-lg transition-shadow duration-300"
                     />
-                    <div className="absolute -bottom-2 -right-2 bg-blue-600 rounded-full p-2 shadow-lg">
-                      <User className="w-4 h-4 text-white" />
+                    <div className="absolute -bottom-1 -right-1 bg-blue-600 rounded-full p-1.5 shadow-lg">
+                      <User className="w-3 h-3 text-white" />
                     </div>
                   </div>
-                  <div className="ml-6 flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-blue-900 transition-colors duration-300">
+                  <div className="ml-4 flex-1">
+                    <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-900 transition-colors duration-300">
                       {member.name}
                     </h3>
-                    <p className="text-sm font-medium text-gray-500 mb-1">
+                    <p className="text-xs font-medium text-gray-500 mb-1">
                       {member.nameEn}
                     </p>
-                    <p className="text-lg font-semibold text-blue-600">
+                    <p className="text-sm font-semibold text-blue-600">
                       {member.position}
                     </p>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-xs text-gray-500">
                       {member.positionEn}
                     </p>
                   </div>
                 </div>
 
-                <p className="text-gray-700 leading-relaxed mb-6">
+                <p className="text-gray-700 leading-relaxed mb-4 text-sm">
                   {member.bio}
                 </p>
 
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-3">专业技能</h4>
-                  <div className="flex flex-wrap gap-2">
+                <div className="mb-4">
+                  <h4 className="text-xs font-semibold text-gray-900 mb-2">专业技能</h4>
+                  <div className="flex flex-wrap gap-1.5">
                     {member.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full"
+                        className="px-2 py-0.5 bg-blue-100 text-blue-800 text-xs font-medium rounded-full"
                       >
                         {skill}
                       </span>
@@ -416,24 +416,24 @@ const AboutPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex space-x-4 pt-4 border-t border-gray-100">
+                <div className="flex space-x-3 pt-3 border-t border-gray-100">
                   <a
                     href={member.social.github}
                     className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
                   >
-                    <Github className="w-5 h-5" />
+                    <Github className="w-4 h-4" />
                   </a>
                   <a
                     href={member.social.linkedin}
                     className="text-gray-400 hover:text-blue-600 transition-colors duration-200"
                   >
-                    <Linkedin className="w-5 h-5" />
+                    <Linkedin className="w-4 h-4" />
                   </a>
                   <a
                     href={`mailto:${member.social.email}`}
                     className="text-gray-400 hover:text-red-600 transition-colors duration-200"
                   >
-                    <Mail className="w-5 h-5" />
+                    <Mail className="w-4 h-4" />
                   </a>
                 </div>
               </div>
