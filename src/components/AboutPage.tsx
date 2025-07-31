@@ -77,36 +77,36 @@ const AboutPage: React.FC = () => {
       title: '创新驱动',
       subtitle: 'People First',
       description: '我们鼓励大胆想象和颠覆性思维，最好的想法往往来自于对现状的不断质疑。',
-      color: 'text-sky-400',
-      bgColor: 'bg-sky-50',
-      borderColor: 'border-sky-100'
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-50',
+      borderColor: 'border-blue-100'
     },
     {
       icon: Lightbulb,
       title: '开放协作',
       subtitle: 'Continuous Innovation',
       description: '我们相信团队的力量大于个人之和。透明的沟通和无私的知识共享是我们工作的基石。',
-      color: 'text-slate-400',
-      bgColor: 'bg-slate-50',
-      borderColor: 'border-slate-100'
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-50',
+      borderColor: 'border-purple-100'
     },
     {
       icon: Shield,
       title: '务实高效',
       subtitle: 'Integrity & Transparency',
       description: '技术最终要创造价值。我们崇尚务实，快速迭代，以最高效的方式解决最真实的问题。',
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-50',
-      borderColor: 'border-cyan-100'
+      color: 'text-emerald-400',
+      bgColor: 'bg-emerald-50',
+      borderColor: 'border-emerald-100'
     },
     {
       icon: Rocket,
       title: '追求卓越',
       subtitle: 'Pursuit of Excellence',
       description: '我们对质量有着极致的追求，不满足于"够用"，而是要做到最好。每一行代码，每一个设计，都体现我们对卓越的承诺。',
-      color: 'text-indigo-400',
-      bgColor: 'bg-indigo-50',
-      borderColor: 'border-indigo-100'
+      color: 'text-rose-400',
+      bgColor: 'bg-rose-50',
+      borderColor: 'border-rose-100'
     }
   ];
 
