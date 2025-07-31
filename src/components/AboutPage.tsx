@@ -174,10 +174,10 @@ const AboutPage: React.FC = () => {
       {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50">
         <div className="max-w-[224rem] mx-auto px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-28">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="text-3xl font-bold group cursor-pointer">
+              <div className="text-5xl font-bold group cursor-pointer">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_ease_infinite] group-hover:animate-[gradient_1s_ease_infinite]">
                   Claymore
                 </span>
