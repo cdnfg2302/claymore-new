@@ -252,7 +252,7 @@ const AboutPage: React.FC = () => {
               <span className="text-gray-800"> AI Lab</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
-              始于创造，通晓语言，以打造自主智能体(Agent)为使命，凭借年轻(YOUNG)的力量挑战未来。
+              以自主智能体(Agent)为目标，用推理(INFERENCE)的力量共赢未来。
             </p>
           </div>
           <div className="mt-12 animate-bounce">
