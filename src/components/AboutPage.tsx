@@ -354,7 +354,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Team Section */}
-      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20 snap-start min-h-screen">
+      <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20 snap-start min-h-screen pt-32">
         <div className="max-w-6xl mx-auto px-6 h-full flex flex-col justify-center">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
