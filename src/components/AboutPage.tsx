@@ -104,9 +104,9 @@ const AboutPage: React.FC = () => {
       title: '追求卓越',
       subtitle: 'Pursuit of Excellence',
       description: '我们对质量有着极致的追求，不满足于"够用"，而是要做到最好。每一行代码，每一个设计，都体现我们对卓越的承诺。',
-      color: 'text-rose-400',
-      bgColor: 'bg-rose-50',
-      borderColor: 'border-rose-100'
+      color: 'text-gray-400',
+      bgColor: 'bg-gray-50',
+      borderColor: 'border-gray-100'
     }
   ];
 
