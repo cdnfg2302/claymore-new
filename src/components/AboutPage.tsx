@@ -357,7 +357,7 @@ const AboutPage: React.FC = () => {
       <section className="bg-gradient-to-br from-gray-50 to-blue-50 pt-40 pb-20 snap-start min-h-screen">
         <div className="max-w-6xl mx-auto px-6 h-full flex flex-col justify-center">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               核心团队
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -365,11 +365,11 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-xl p-1 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
+                className="group bg-white rounded-xl p-3 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
               >
                 <div className="flex items-start mb-4">
                   <div className="relative">
