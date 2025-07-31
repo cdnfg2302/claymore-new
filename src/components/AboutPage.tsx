@@ -177,7 +177,7 @@ const AboutPage: React.FC = () => {
           <div className="flex items-center justify-between h-28">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="text-5xl font-bold group cursor-pointer">
+              <div className="text-4xl font-bold group cursor-pointer">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_ease_infinite] group-hover:animate-[gradient_1s_ease_infinite]">
                   Claymore
                 </span>
