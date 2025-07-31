@@ -262,42 +262,42 @@ const AboutPage: React.FC = () => {
       </div>
 
       {/* Story Grid */}
-      <div id="about" className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+      <div id="about" className="max-w-7xl mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
           {storyItems.map((item, index) => {
             const IconComponent = item.icon;
             return (
               <div
                 key={item.letter}
-                className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100"
+                className="group relative bg-white/80 backdrop-blur-sm rounded-xl p-5 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100"
                 style={{
-                  animationDelay: `${index * 100}ms`
+                  animationDelay: `${index * 50}ms`
                 }}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`}>
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-xl`}>
                 </div>
 
                 <div className="relative">
-                  <div className="flex items-center mb-6">
-                    <div className="relative">
-                      <span className={`text-8xl font-black bg-gradient-to-br ${item.gradient} bg-clip-text text-transparent opacity-20 group-hover:opacity-30 transition-opacity duration-300`}>
+                  <div className="flex items-start mb-4">
+                    <div className="relative flex-shrink-0">
+                      <span className={`text-5xl font-black bg-gradient-to-br ${item.gradient} bg-clip-text text-transparent opacity-25 group-hover:opacity-35 transition-opacity duration-300`}>
                         {item.letter}
                       </span>
-                      <div className="absolute top-4 left-4">
-                        <IconComponent className={`w-8 h-8 text-white bg-gradient-to-br ${item.gradient} p-1.5 rounded-lg shadow-lg`} />
+                      <div className="absolute top-2 left-2">
+                        <IconComponent className={`w-5 h-5 text-white bg-gradient-to-br ${item.gradient} p-1 rounded-md shadow-md`} />
                       </div>
                     </div>
-                    <div className="ml-6 flex-1">
-                      <h3 className="text-3xl font-bold text-gray-900 mb-1 group-hover:text-blue-900 transition-colors duration-300">
+                    <div className="ml-4 flex-1 min-w-0">
+                      <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-blue-900 transition-colors duration-300 line-clamp-1">
                         {item.english}
                       </h3>
-                      <p className="text-lg font-medium text-gray-500">
+                      <p className="text-sm font-medium text-gray-500 mb-2">
                         {item.chinese}
                       </p>
                     </div>
                   </div>
 
-                  <p className="text-gray-700 leading-relaxed text-lg group-hover:text-gray-800 transition-colors duration-300">
+                  <p className="text-gray-700 leading-relaxed text-sm group-hover:text-gray-800 transition-colors duration-300 line-clamp-3">
                     {item.description}
                   </p>
                 </div>
