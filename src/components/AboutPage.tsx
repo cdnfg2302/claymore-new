@@ -262,7 +262,7 @@ const AboutPage: React.FC = () => {
       </div>
 
       {/* Story Grid */}
-      <div id="about" className="max-w-7xl mx-auto px-6 py-12">
+      <div id="about" className="max-w-7xl mx-auto px-6 py-12 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/lovable-uploads/a4eb5443-f5f5-4318-94f1-20c2993447db.png)' }}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
           {storyItems.map((item, index) => {
             const IconComponent = item.icon;
