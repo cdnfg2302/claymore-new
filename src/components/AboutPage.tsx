@@ -445,11 +445,8 @@ const AboutPage: React.FC = () => {
       {/* Footer */}
       <footer id="contact" className="relative py-12 snap-start bg-cover bg-center bg-no-repeat text-gray-300" style={{backgroundImage: `url('/lovable-uploads/b25e0306-4671-43cb-aaff-c109532cf78b.png')`}}>
         <div className="relative max-w-6xl mx-auto px-6 text-center">
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Claymore AI Lab</h3>
-            <p className="text-gray-400">塑造智能未来，从今天开始</p>
-          </div>
           <div className="border-t border-gray-700 pt-8">
+            <p className="text-gray-400 mb-4">塑造智能未来，从今天开始</p>
             <p className="text-gray-500">
               &copy; 2025 Claymore AI Lab. All Rights Reserved.
             </p>
