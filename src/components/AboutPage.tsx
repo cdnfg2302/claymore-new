@@ -365,11 +365,11 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
+                className="group bg-white rounded-xl p-2 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
               >
                 <div className="flex items-start mb-4">
                   <div className="relative">
