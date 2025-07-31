@@ -443,8 +443,9 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-gray-900 text-gray-300 py-12 snap-start">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+      <footer id="contact" className="relative py-12 snap-start bg-cover bg-center bg-no-repeat text-gray-300" style={{backgroundImage: `url('/lovable-uploads/b25e0306-4671-43cb-aaff-c109532cf78b.png')`}}>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative max-w-6xl mx-auto px-6 text-center">
           <div className="mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">Claymore AI Lab</h3>
             <p className="text-gray-400">塑造智能未来，从今天开始</p>
