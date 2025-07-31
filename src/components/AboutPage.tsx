@@ -177,11 +177,11 @@ const AboutPage: React.FC = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="text-2xl font-bold">
-                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              <div className="text-2xl font-bold group cursor-pointer">
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_ease_infinite] group-hover:animate-[gradient_1s_ease_infinite]">
                   Claymore
                 </span>
-                <span className="text-gray-800 ml-1">AI Lab</span>
+                <span className="text-gray-800 ml-1 group-hover:text-blue-600 transition-colors duration-300">AI Lab</span>
               </div>
             </div>
 
