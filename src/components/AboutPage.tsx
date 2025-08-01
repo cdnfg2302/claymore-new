@@ -193,7 +193,7 @@ const AboutPage: React.FC = () => {
               <a href="#products" className="text-lg text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
                 AI产品
               </a>
-              <a href="#contact" className="text-lg text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+              <a href="/contact" className="text-lg text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
                 联系我们
               </a>
             </div>
@@ -228,7 +228,7 @@ const AboutPage: React.FC = () => {
                   AI产品
                 </a>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="block text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
