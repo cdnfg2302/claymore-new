@@ -101,8 +101,8 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">办公地址</h3>
-                      <p className="text-gray-600">中国北京市朝阳区</p>
-                      <p className="text-gray-600">科技创新园区A座1001室</p>
+                      <p className="text-gray-600">成都市高新区天府五街200号</p>
+                      <p className="text-gray-600">5号楼5楼</p>
                     </div>
                   </div>
 
