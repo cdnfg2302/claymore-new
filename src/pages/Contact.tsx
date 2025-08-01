@@ -110,7 +110,7 @@ const Contact: React.FC = () => {
             {/* Contact Information */}
             <div className="space-y-12">
               <div>
-                <h2 className="text-3xl font-bold text-gray-800 mb-8">取得联系</h2>
+                <h2 className="text-3xl font-bold text-gray-800 mb-8">联系方式</h2>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
