@@ -1,180 +1,197 @@
-import { MessageSquare, Palette, Users, Utensils, Phone, Globe, BarChart3, Cpu, ChevronRight } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import React from 'react';
+import { Phone, Palette, MessageSquare, Brain, Sparkles, ArrowRight, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const Products = () => {
+const Products: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
   const products = [
     {
-      icon: MessageSquare,
-      iconColor: "text-blue-500",
-      bgColor: "bg-blue-50",
-      title: "Claymore聊天智能体",
-      subtitle: "CHAT AGENT",
-      description: "基于大语言模型的智能对话系统，支持多轮对话、上下文理解和个性化回复。可广泛应用于客服、咨询、教育等场景。",
-      features: ["多轮对话", "上下文理解", "个性化回复", "多场景适配"]
+      icon: Phone,
+      title: '电话智能体',
+      description: '智能语音交互系统，提供自然流畅的电话对话体验，支持多种业务场景。',
+      features: ['智能语音识别', '自然语言理解', '多轮对话管理', '情感识别'],
+      gradient: 'from-blue-600 to-cyan-600'
     },
     {
       icon: Palette,
-      iconColor: "text-purple-500",
-      bgColor: "bg-purple-50",
-      title: "绘画智能体",
-      subtitle: "AI ART GENERATOR",
-      description: "先进的AI绘画生成系统，支持文本到图像、风格转换、图像编辑等功能。让创意无限延伸，艺术触手可及。",
-      features: ["文本生图", "风格转换", "图像编辑", "高清输出"]
+      title: '绘画智能体',
+      description: '基于AI的创意绘画工具，能够理解描述并生成高质量的艺术作品。',
+      features: ['文本转图像', '风格迁移', '图像编辑', '创意生成'],
+      gradient: 'from-purple-600 to-pink-600'
     },
     {
-      icon: Users,
-      iconColor: "text-green-500",
-      bgColor: "bg-green-50",
-      title: "换脸智能体",
-      subtitle: "FACE SWAP AI",
-      description: "基于深度学习的人脸替换技术，实现高质量、自然的人脸交换效果。支持视频和图片处理，广泛应用于娱乐和创意制作。",
-      features: ["高精度换脸", "视频处理", "实时预览", "批量处理"]
+      icon: MessageSquare,
+      title: '对话智能体',
+      description: '智能客服和对话系统，提供24/7全天候的智能客户服务支持。',
+      features: ['智能问答', '知识库管理', '多渠道接入', '数据分析'],
+      gradient: 'from-green-600 to-teal-600'
     },
     {
-      icon: Utensils,
-      iconColor: "text-orange-500",
-      bgColor: "bg-orange-50",
-      title: "Claymore智能菜单",
-      subtitle: "MENU TRANSLATION AI",
-      description: "专为餐饮行业打造的智能翻译系统，支持菜单拍照识别、多语言翻译和文化适配，让美食跨越语言障碍。",
-      features: ["拍照识别", "多语言翻译", "文化适配", "菜品推荐"]
-    },
-    {
-      icon: Phone,
-      iconColor: "text-red-500",
-      bgColor: "bg-red-50",
-      title: "电话外呼智能体",
-      subtitle: "AI CALL CENTER",
-      description: "智能语音外呼系统，具备自然语音交互、意图识别和情感分析能力。提升客户服务效率，降低人工成本。",
-      features: ["语音识别", "意图理解", "情感分析", "自动记录"]
-    },
-    {
-      icon: Globe,
-      iconColor: "text-indigo-500",
-      bgColor: "bg-indigo-50",
-      title: "VidLingual多语言翻译工具",
-      subtitle: "YOUTUBE MULTI-LANGUAGE PUBLISHER",
-      description: "一键将YouTube视频翻译成多种语言并自动发布，支持字幕生成、语音合成和视频优化，助力内容全球化传播。",
-      features: ["多语言翻译", "字幕生成", "语音合成", "自动发布"]
-    },
-    {
-      icon: BarChart3,
-      iconColor: "text-pink-500",
-      bgColor: "bg-pink-50",
-      title: "TikTok直播数据获取工具",
-      subtitle: "TIKTOK LIVE DATA ANALYTICS",
-      description: "实时监控和分析TikTok直播数据，提供观众行为分析、热点话题追踪和营销效果评估，助力直播运营优化。",
-      features: ["实时监控", "数据分析", "热点追踪", "效果评估"]
-    },
-    {
-      icon: Cpu,
-      iconColor: "text-teal-500",
-      bgColor: "bg-teal-50",
-      title: "智能硬件ESP32开发板",
-      subtitle: "ESP32 SMART HARDWARE",
-      description: "基于ESP32芯片的智能硬件开发平台，集成AI算法和物联网功能，支持边缘计算和实时数据处理。",
-      features: ["边缘计算", "物联网连接", "AI算法", "实时处理"]
+      icon: Brain,
+      title: '推理智能体',
+      description: '强大的逻辑推理和决策支持系统，帮助解决复杂的业务问题。',
+      features: ['逻辑推理', '决策支持', '数据分析', '智能建议'],
+      gradient: 'from-orange-600 to-red-600'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-muted/50 to-background">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50">
+        <div className="max-w-[224rem] mx-auto px-8">
+          <div className="flex items-center justify-between h-28">
+            {/* Logo */}
+            <div className="flex items-center">
+              <Link to="/" className="text-4xl font-bold group cursor-pointer">
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_ease_infinite] group-hover:animate-[gradient_1s_ease_infinite]">
+                  Claymore
+                </span>
+                <span className="text-gray-800 ml-1 group-hover:text-blue-600 transition-colors duration-300">AI Lab</span>
+              </Link>
+            </div>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              <Link to="/" className="text-lg text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+                关于我们
+              </Link>
+              <span className="text-lg text-blue-600 font-medium">
+                AI产品
+              </span>
+              <Link to="/contact" className="text-lg text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+                联系我们
+              </Link>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              >
+                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="md:hidden border-t border-gray-200/50 bg-white/95 backdrop-blur-md">
+              <div className="py-4 space-y-4">
+                <Link
+                  to="/"
+                  className="block text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  关于我们
+                </Link>
+                <span className="block text-blue-600 font-medium">
+                  AI产品
+                </span>
+                <Link
+                  to="/contact"
+                  className="block text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  联系我们
+                </Link>
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent mb-6">
-            AI 产品矩阵
+      <section className="py-20 px-4 sm:px-6 lg:px-8 pt-40">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-6">
+            AI产品矩阵
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            全方位的AI解决方案，从对话交互到视觉创作，从数据分析到硬件开发
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            探索我们的智能体产品系列，每一个都经过精心设计，为不同场景提供智能化解决方案
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {["全球化部署", "高性能处理", "企业级安全"].map((feature, index) => (
-              <Badge key={index} variant="secondary" className="px-4 py-2 text-sm">
-                {feature}
-              </Badge>
+        </div>
+      </section>
+
+      {/* Products Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {products.map((product, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 group"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${product.gradient} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                    <product.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-gray-800 mb-3">{product.title}</h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">{product.description}</p>
+                    
+                    <div className="space-y-3 mb-6">
+                      {product.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center space-x-3">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                          <span className="text-gray-700">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <button className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-1 transition-all duration-200">
+                      <span>了解更多</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Products Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {products.map((product, index) => {
-              const IconComponent = product.icon;
-              return (
-                <Card 
-                  key={index} 
-                  className="group hover:shadow-xl transition-all duration-300 border-0 bg-card/80 backdrop-blur-sm hover:scale-105"
-                >
-                  <CardHeader className="space-y-4">
-                    <div className={`w-16 h-16 ${product.bgColor} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <IconComponent className={`w-8 h-8 ${product.iconColor}`} />
-                    </div>
-                    <div>
-                      <CardTitle className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                        {product.title}
-                      </CardTitle>
-                      <CardDescription className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                        {product.subtitle}
-                      </CardDescription>
-                    </div>
-                  </CardHeader>
-                  
-                  <CardContent className="space-y-4">
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {product.description}
-                    </p>
-                    
-                    <div className="space-y-2">
-                      <h4 className="text-sm font-semibold text-foreground">核心特性：</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {product.features.map((feature, featureIndex) => (
-                          <Badge 
-                            key={featureIndex} 
-                            variant="outline" 
-                            className="text-xs px-2 py-1"
-                          >
-                            {feature}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <Button 
-                      variant="ghost" 
-                      size="sm" 
-                      className="w-full mt-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all"
-                    >
-                      了解更多
-                      <ChevronRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              );
-            })}
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white">
+            <Sparkles className="w-16 h-16 mx-auto mb-6 opacity-90" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              准备好体验AI的力量了吗？
+            </h2>
+            <p className="text-xl opacity-90 mb-8">
+              联系我们，让我们一起探讨如何将这些智能体集成到您的业务中
+            </p>
+            <Link 
+              to="/contact"
+              className="inline-flex items-center space-x-2 bg-white text-blue-600 font-semibold px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors duration-200"
+            >
+              <span>立即联系</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            开启AI智能化之旅
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            我们的产品矩阵覆盖了从对话交互到视觉创作，从数据分析到硬件开发的全方位AI解决方案。每一个产品都经过精心打磨，致力于为用户提供最优质的智能化体验。
+      {/* Footer */}
+      <footer className="bg-gradient-to-r from-slate-100 to-blue-100 text-gray-800 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">C</span>
+            </div>
+            <span className="text-xl font-bold">Claymore AI Lab</span>
+          </div>
+          <p className="text-gray-600 mb-4">
+            专注于AI技术创新与应用，为未来智能世界而构建
           </p>
-          <Button size="lg" className="px-8 py-6 text-lg">
-            联系我们了解更多
-          </Button>
+          <p className="text-gray-500 text-sm">
+            © 2025 Claymore AI Lab. All rights reserved.
+          </p>
         </div>
-      </section>
+      </footer>
     </div>
   );
 };
