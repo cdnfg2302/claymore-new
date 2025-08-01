@@ -225,7 +225,7 @@ const Contact: React.FC = () => {
             专注于AI技术创新与应用，为未来智能世界而构建
           </p>
           <p className="text-gray-500 text-sm">
-            © 2024 Claymore AI Lab. All rights reserved.
+            © 2025 Claymore AI Lab. All rights reserved.
           </p>
         </div>
       </footer>
