@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
               <Link to="/" className="text-lg text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
                 关于我们
               </Link>
-              <a href="#products" className="text-lg text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+              <a href="/products" className="text-lg text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
                 AI产品
               </a>
               <span className="text-lg text-blue-600 font-medium">
@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
                   关于我们
                 </Link>
                 <a
-                  href="#products"
+                  href="/products"
                   className="block text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
