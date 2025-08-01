@@ -45,9 +45,9 @@ const Contact: React.FC = () => {
               <Link to="/" className="text-lg text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
                 关于我们
               </Link>
-              <a href="#products" className="text-lg text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+              <Link to="/products" className="text-lg text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
                 AI产品
-              </a>
+              </Link>
               <span className="text-lg text-blue-600 font-medium">
                 联系我们
               </span>
@@ -75,13 +75,13 @@ const Contact: React.FC = () => {
                 >
                   关于我们
                 </Link>
-                <a
-                  href="#products"
+                <Link
+                  to="/products"
                   className="block text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   AI产品
-                </a>
+                </Link>
                 <span className="block text-blue-600 font-medium">
                   联系我们
                 </span>
