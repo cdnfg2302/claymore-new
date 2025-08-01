@@ -1,8 +1,9 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Clock, Send, Github, Linkedin, X } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Github, Linkedin, X, Menu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Contact: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [formData, setFormData] = React.useState({
     name: '',
     email: '',
@@ -25,35 +26,73 @@ const Contact: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Navigation */}
-      <nav className="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50">
+        <div className="max-w-[224rem] mx-auto px-8">
+          <div className="flex items-center justify-between h-28">
+            {/* Logo */}
             <div className="flex items-center">
-              <Link to="/" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">C</span>
-                </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-                  Claymore AI Lab
+              <Link to="/" className="text-4xl font-bold group cursor-pointer">
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_ease_infinite] group-hover:animate-[gradient_1s_ease_infinite]">
+                  Claymore
                 </span>
+                <span className="text-gray-800 ml-1 group-hover:text-blue-600 transition-colors duration-300">AI Lab</span>
               </Link>
             </div>
-            <div className="flex items-center space-x-8">
-              <Link 
-                to="/" 
-                className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
-              >
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              <Link to="/" className="text-lg text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
                 关于我们
               </Link>
-              <span className="text-blue-600 font-medium">联系我们</span>
+              <a href="#products" className="text-lg text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+                AI产品
+              </a>
+              <span className="text-lg text-blue-600 font-medium">
+                联系我们
+              </span>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              >
+                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
             </div>
           </div>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="md:hidden border-t border-gray-200/50 bg-white/95 backdrop-blur-md">
+              <div className="py-4 space-y-4">
+                <Link
+                  to="/"
+                  className="block text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  关于我们
+                </Link>
+                <a
+                  href="#products"
+                  className="block text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  AI产品
+                </a>
+                <span className="block text-blue-600 font-medium">
+                  联系我们
+                </span>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 pt-40">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-6">
             联系我们
