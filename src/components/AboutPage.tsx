@@ -448,7 +448,7 @@ const AboutPage: React.FC = () => {
           <div className="border-t border-gray-700 pt-8">
             <p className="text-gray-500 mb-4">塑造智能未来，从今天开始</p>
             <p className="text-gray-500">
-              2025 Claymore AI Lab. All Rights Reserved.
+              &copy; 2025 Claymore AI Lab. All Rights Reserved.
             </p>
           </div>
         </div>
