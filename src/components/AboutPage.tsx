@@ -116,7 +116,7 @@ const AboutPage: React.FC = () => {
       nameEn: 'Gong Zheng',
       position: '联合创始人',
       positionEn: 'Co-Founder',
-      avatar: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2',
+      avatar: '/lovable-uploads/3b042b68-9d6f-45fe-b252-34d9325aefbc.png',
       bio: '互联网互动娱乐行业18年工作经验，2007年就职于盛大网络，参与《迪士尼魔幻飞板》、《超级跑跑》、《格子客》、《永恒之塔》、《风云》等多款IP产品的运营与数据分析工作。',
       skills: ['产品运营', '数据分析', 'IP运营'],
       social: {
@@ -130,7 +130,7 @@ const AboutPage: React.FC = () => {
       nameEn: 'Liu Yang',
       position: '技术总监',
       positionEn: 'CTO',
-      avatar: 'https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2',
+      avatar: '/lovable-uploads/b3be873e-676c-4c4c-b77a-e06ca1b28798.png',
       bio: '主导文旅行业 AI 解决方案研发，在人工智能、系统架构、数据库等领域具备深厚技术积累。专注于将AI技术与实际业务场景深度融合。',
       skills: ['人工智能', '系统架构', '数据库'],
       social: {
@@ -144,7 +144,7 @@ const AboutPage: React.FC = () => {
       nameEn: 'Ren Junkun',
       position: '首席AI专家',
       positionEn: 'Chief AI Expert',
-      avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2',
+      avatar: '/lovable-uploads/595be887-1f87-4269-bbe6-a47f6f545488.png',
       bio: '17年互联网开发经验，人工智能专家，曾就职于盛大网络、完美时空、育碧，在机器学习、数据安全、AI分析、算法领域拥有多年的研究和实践经验，拥有整套垂直化私有AI模型训练和部署方案。',
       skills: ['机器学习', '数据安全', 'AI算法'],
       social: {
@@ -158,7 +158,7 @@ const AboutPage: React.FC = () => {
       nameEn: 'Zou Dingjie',
       position: '技术架构师',
       positionEn: 'Technical Architect',
-      avatar: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2',
+      avatar: '/lovable-uploads/d4f31cf0-b641-48d1-b30f-2bfcfdddb493.png',
       bio: '深度参与公司技术体系搭建与运维优化工作，先后主导核心业务系统上云迁移、私有云平台搭建及 DevOps 体系落地等关键项目，在云计算和系统运维领域经验丰富。',
       skills: ['云计算', 'DevOps', '系统运维'],
       social: {
